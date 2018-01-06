@@ -1,8 +1,14 @@
+// DEPENDENCIES
+// =====================================
+
 var dataKeys = require("./keys.js");
 var fs = require('fs');
 var twitter = require('twitter');
 var spotify = require('spotify');
 var request = require('request');
+
+// FUNCTIONS
+// =====================================
 
 var writeToLog = function(data) {
 	fs.appendFile("log.txt", '\r\n\r\n');
@@ -142,6 +148,9 @@ var pick = function(caseData, functionData) {
 var runThis = function(argOne, argTwo) {
 	pick(argOne, argTwo);
 };
+
+// MAIN PROCESS
+// =====================================
 
 runThis(process.argv[2], process.argv[3]);
 
